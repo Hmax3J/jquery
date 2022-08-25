@@ -1,0 +1,31 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('h1').html()) // read는 0번째 collection을 나타낸다.
+
+    $('footer').html('<mark>footer</mark>') // footer의 전부를 html코드로 나타낸다.
+    console.log($('footer').html())
+
+    console.log($('header').find('h1').eq(1).html()) // find는 header의 자식에서 찾는다.
+    $('header').find('h1').eq(1).html('<hr>')
+
+    $('ul').find('li').eq(2).html('index: 2').end() // end()는 find가 return한 collection을 return한다. 원점은 li 5개 들어있는 collection이다.
+        .eq(3).html('index: 3').end()
+        .eq(4).html('index: 4')
+})
+</script>
+
+<header>
+    <h1><b>hello</b></h1>
+    <h1>world</h1>
+</header>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<footer></footer>

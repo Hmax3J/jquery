@@ -1,0 +1,18 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('a').attr('href'))
+
+    $('a').attr('href', 'https://www.daum.net/')
+
+    $('a').attr({
+        href: 'https://jquery.com',
+        target: '_blank'
+    })
+
+    $('a').removeAttr('target')
+})
+</script>
+
+<a href='https://www.google.co.kr/'>google</a>
+<a href='https://www.naver.com/'>naver</a>
