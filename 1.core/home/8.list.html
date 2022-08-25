@@ -1,8 +1,11 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 $(() => {
-    for(let i = 0; i < 10; i++) 
-        $('<li>').eq(i).html('item ' + i).appendTo('ul')
+    for(let i = 0; i < 10; i++) {
+        $('<li>', {
+            html: '<li>item ' + i + '</li>',
+        }).appendTo('ul')
+    }
 })
 </script>
 
