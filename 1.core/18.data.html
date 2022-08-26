@@ -1,0 +1,16 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('body').data('foo', 10) // data는 첫번째가 key, 2번째가 value
+    $('body').data('bar', {isManual: true}) // value는 any type이라 객체도 가능하다.
+    $('body').data({
+        baz: [1, 2],
+        hoi: 'hello'
+    }) // n개는 객체로 집어 넣으면 된다.
+
+    console.log($('body').data('foo'))
+    console.log($('body').data('bar'))
+
+    console.log($('body').data()) // 파라미터 없이 호출하면 여태 넣은게 다 들어있다.
+})
+</script>

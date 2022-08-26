@@ -1,0 +1,26 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('.4').parent()) // div 3을 return 한다.
+
+    console.log($('.4').parents()) // html까지 return한다. length 6, div3, div2-1, div1, pre, body, html
+
+    console.log($('.4').parents('div')) // div부모만 return한다.
+
+    console.log($('.4').parentsUntil('div.1')) // Until은 미만이다. div3, div2-1 까지만 return한다.
+
+    console.log($('.4').closest('div')) // div 이상 까지 return한다. 마침 내가 div라 내가 return한다.
+})
+</script>
+
+<pre>
+    <div class='1'>
+        <div class='2-1'>
+            <div class='3'>
+                <div class='4'></div>
+            </div>
+        </div>
+        <div class='2-2'></div>
+        <div class='2-3'></div>
+    </div>
+</pre>

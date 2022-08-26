@@ -1,14 +1,13 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
-$(() => { // 'div' 면 selector 이고 '<div>' 는 만든다. collection 이다.
-    $('<div>').appendTo('hr') // contents를 넣으면 생성한다.
-/*
-    $('<div>', { // <div class="red"> 이렇게 써도 된다.
+$(() => {
+    $('<div>').appendTo('hr')
+    /*
+    $('<div>', {
         html: '<p class="center">red</p>',
         class: 'red'
-    }).appendTo('hr') // 화면에 출력을 시켜야 나온다. append 사용한다.
+    }).appendTo('hr')
     */
-    // 과제: 위 $() 파라미터를 하나로 줄여라.
     $('<div class="red"><p class="center">red</p></div>').appendTo('hr')
 })
 </script>

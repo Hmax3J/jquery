@@ -1,9 +1,9 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
     jQuery(document).ready(() => $('body').append('<p>one</p>')) // $() 는 jquery라는 뜻이다.
-
+    // html코드를 parseing해서 dom을 만드는데 이것을 만들 때 까지 기다리는 것을 ready가 한다.
     $(document).ready(() => $('body').append('<p>two</p>'))
-
+    // append는 컨텐츠를 파라미터로 받은 것을 body안에 추가하고 body안에 다른것들이 있으면 맨 마지막에 추가한다.
     let readyFn = () => $('body').append('<p>three</p>') // p 엘레먼트, text node
     $(document).ready(readyFn)
 

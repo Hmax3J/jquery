@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => { // css는 속성을 건드린다. property
+    console.log($('h1').css('font-size')) // h1은 가장 큰 사이즈, 1rem의 2배다.
+    console.log($('h1.big').css('font-size', '3rem')) // rem 기준으로 3배 커졌다.
+    $('h1.big').css({
+        'font-size': '4rem',
+        color: 'red'
+    })
+})
+</script>
+
+<h1>HELLO</h1>
+<h1 class='big'>WORLD</h1>

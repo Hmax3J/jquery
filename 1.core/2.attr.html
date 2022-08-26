@@ -1,6 +1,6 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
-$(() => {
+$(() => { // attr은 속성을 건드린다. attribute
     console.log($('a').attr('href')) // 컬렉션 안에 있는 0번 째 어트리뷰트의 밸류에만 관심이 있다. read 할 때는 파라미터 1개를 쓴다.
 
     $('a').attr('href', 'https://www.daum.net/') // 컬렉션 안에 있는 모든 원소들을 다 바꾼다. write 할 때 파라미터 2개를 쓴다.

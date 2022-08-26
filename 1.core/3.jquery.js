@@ -3,7 +3,7 @@ $('#myId') // <div id='myId'></div> 같은 것들이 return 된다.
 // 과제: class myClass DOM들을 찾아라.
 $('.myClass')
 
-// 과제: name attribute valu 가 surname 인 input DOM 들을 찾아라.
+// 과제: name attribute value 가 surname 인 input DOM 들을 찾아라.
 $('input[name="surname"]') // <input name='surname'/>
 
 $('#contents ul.people li') // li를 전부 return 한다. collection 이라 그렇다. 집합이다.
@@ -17,7 +17,7 @@ $('#contents ul.people li') // li를 전부 return 한다. collection 이라 그
 </dlv>
 */
 
-$('a.external:first')
+$('a.external:first') // 마지막은 last로 찾는다.
 /*
 <a class='external'></a>
 <a class='external'></a>
@@ -33,10 +33,10 @@ $('li:odd') // 홀수 번째 li를 return 한다. 카운트는 0부터 시작한
 </ul>
 */
 
-$('div:visible') // 보이는 객체들만 찾는다.
+$('div:visible') // 화면에 출력되어 있는 보이는 객체들만 찾는다.
 
 $('div:gt(1)') // 1은 collection안에 들어갈 원소의 index다. 1보다 큰 인덱스를 collection에 return 한다.
-/*
+/* 미만을 찾으려면 lt로 찾는다.
 <div></div>
 <div></div>
 <div></div> --
@@ -95,7 +95,7 @@ $('form :selected')
 <select><option></option></select>
 */
 
-$('form :enabled')
+$('form :enabled') // 기본값은 enabled다.
 $('form :diabled')
 
 $('form :file')

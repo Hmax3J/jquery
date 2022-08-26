@@ -1,8 +1,7 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
     let msg = 'div.foo가 '
-
-    $(() => { // jquery function은 collection을 return 한다. 배열이다. length 사용이 가능하다.
+    $(() => {
         msg += $('div.foo').length ? '있다.' : '없다.'
 
         console.log(msg)
