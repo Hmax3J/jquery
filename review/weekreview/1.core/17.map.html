@@ -1,0 +1,23 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('li').map((i, e) => console.log(i, e))
+
+    let collection = $('li').map((i, e) => e.id)
+    console.log(collection)
+    console.log(collection.get())
+
+    console.log(collection.get().join(''))
+
+    $.map(collection.get(), (e, i) => console.log(i, e))
+
+    let array = $.map({name: 'adelia', age: 20}, (v, k) => v)
+    console.log(array)
+})
+</script>
+
+<ul>
+    <li id='a'>A</li>
+    <li id='b'>B</li>
+    <li id='c'>C</li>
+</ul>

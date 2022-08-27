@@ -1,0 +1,31 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('hi').html())
+
+    $('footer').html('<mark>footer</mark>')
+    console.log($('footer').html())
+
+    console.log($('header').find('h1').eq(1).html())
+    $('header').find('h1').eq(1).html('<hr>')
+
+    $('ul').find('li').eq(2).html('index: 2').end()
+        .eq(3).html('index: 3').end()
+        .eq(4).html('index: 4')
+})
+</script>
+
+<header>
+    <h1><b>hello</b></h1>
+    <h1>world</h1>
+</header>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<footer></footer>

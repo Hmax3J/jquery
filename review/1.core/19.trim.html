@@ -1,0 +1,10 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let phrase = ' hello world '
+
+    // 과제: trim() 결과를 확인토록, 아래 parameter 를 수정하라.
+    console.log('|' + phrase.trim() + '|') // string class로 임시로 객체를 만들어 trim 한 후 임시로 만든 것을 버린다.
+    console.log('|' + $.trim(phrase) + '|')
+})
+</script>

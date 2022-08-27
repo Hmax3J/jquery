@@ -1,0 +1,26 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('.4').parent())
+
+    console.log($('.4').parents())
+
+    console.log($('.4').parents('div'))
+
+    console.log($('.4').parentsUntil('div.1'))
+
+    console.log($('.4').closest('div'))
+})
+</script>
+
+<pre>
+    <div class='1'>
+        <div class='2-1'>
+            <div class='3'>
+                <div class='4'></div>
+            </div>
+        </div>
+        <div class='2-2'></div>
+        <div class='2-3'></div>
+    </div>
+</pre>

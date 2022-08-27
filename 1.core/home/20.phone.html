@@ -2,7 +2,7 @@
 <script>
 $(() => {
     // 과제: 전화번호를 숫자만으로 정제하라.
-    console.log($('input').each(e => e.value))
+    $('input').val($('input').val().split('-').join(''))
 })
 </script>
 

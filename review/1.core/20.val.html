@@ -1,0 +1,52 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    // 과제: text 변수에, <input type='text'> 를 찾아서 담아라.
+    let text = $(':text')
+    console.log(text)
+    console.log('|' + text.val() + '|') // 파라미터가 없으면 read한다.
+
+    text.val(' world ')
+    // 과제: text 의 value를 trim 해서, text에 저장하라.
+    text.val(text.val().trim())
+    console.log('|' + text.val() + '|')
+
+    text.val((i, v) => `hello ${v}`)
+
+    $(':checked').each((i, e) => console.log($(e)))
+    // 과제: value 3개를 출력하라.
+    /*
+    night
+    mountain
+    apple
+    */
+    $(':checked').each((i, e) => console.log($(e).val())) // jquery 관점
+    $(':checked').each((i, e) => console.log(e.value)) // html element 관점, 2가지 다 취할 수 있어야 한다.
+
+    //
+    $('input').val(['noon', 'sea', 'banana']) // banana 빼고 선택이 바뀐다.
+    $('#fruit').val('banana') // select는 따로 조건을 준다.
+    $('#greens').val(['cucumber', 'carrot']) // 오이, 당근이 선택된다.
+})
+</script>
+
+<form>
+    <input type='text' value=' hello '/><br>
+
+    <input type='checkbox' value='night' checked/>밤
+    <input type='checkbox' value='noon'/>낮 <br>
+
+    <input type='radio' value='mountain' checked/>산 <!-- 값들이 string type으로 담긴다. text다. request하기 때문이다. -->
+    <input type='radio' value='sea'/>바다 <br>
+
+    <select id='fruit'>
+        <option>apple</option>
+        <option>banana</option>
+    </select>
+
+    <select id='greens' multiple>
+        <option>cucumber</option>
+        <option>cabbage</option>
+        <option>carrot</option>
+    </select>
+</form>

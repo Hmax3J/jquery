@@ -1,0 +1,20 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('li').each((i, e) => console.log(i, e))
+
+    $('li').each((i, e) => console.log(i, e.id))
+
+    jQuery.each([1, 2, 3, 4], (i, e) => console.log(`[${i}]: `, e))
+
+    $.each($('li').toArray(), (i, e) => console.log(i, e))
+
+    $.each({name: 'adelia', age: 20}, (k, v) => console.log(k, ':', v))
+})
+</script>
+
+<ul>
+    <li id='a'>A</li>
+    <li id='b'>B</li>
+    <li id='c'>C</li>
+</ul>
