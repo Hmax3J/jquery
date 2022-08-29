@@ -1,0 +1,25 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('div').on({ // 파라미터가 하나라 본인에게 적용한다. 두 번째 파라미터가 있으면 자식에게 적용한다.
+        mousedown: () => $('div').css('background', 'red'), // 마우스 버튼을 클릭 했을 때를 말한다.
+        mouseup: () => $('div').css('background', 'green'), // 마우스 버튼을 놓았을 때를 말한다.
+        mouseout: () => $('div').css('background', '')
+    })
+
+    $('button').click(() => $('div').off('mouseup')) // div를 찾고 mouseup을 끈다.
+})
+</script>
+
+<style>
+    div {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        border: .1rem solid;
+        margin: 1rem;
+    }
+</style>
+
+<div></div>
+<button type='button'>remove</button>

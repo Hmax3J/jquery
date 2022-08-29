@@ -1,0 +1,28 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click(() => { // handler를 등록한다는 뜻이다.
+        // 과제: userName filed에 값이 입력됐으면, 을 구현하라.
+        if($(':text').val()) $('form').submit()
+        // 과제: '사용자명을 입력하세요.' error message 를 <span>에 출력하라.
+        // else $('span').append('<mark>사용자명을 입력하세요.</mark>')
+        // else $('span').html('<mark>사용자명을 입력하세요.</mark>')
+        // else $('span').text('사용자명을 입력하세요.')
+
+        // 과제: 에러메세지를 빨간색으로 출력하라.
+        // else $('span').text('사용자명을 입력하세요.').css('color', 'red')
+
+        // 과제: 에러메세지를 빨간색으로 출력하라. 그리고,
+        //      userName filed의 border를 점선으로 바꿔라.
+        else {
+            $('span').text('사용자명을 입력하세요.').css('color', 'red')
+            $(':text').css('border', 'red .1rem dotted')
+        }
+    })
+})
+</script>
+
+<form>
+    <input type='text' name='username' placeholder='사용자명'/><span></span><br> <!-- 폼을 작성한다는 value값을 채운다. -->
+    <button type='button'>submit</button> <!-- 폼을 제출한다는 submit 버튼을 눌렀을 때를 말한다. -->
+</form>

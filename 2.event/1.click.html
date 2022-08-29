@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let cnt = 0
+
+    $('button').eq(0).click(() => $(`<li>${cnt++}</li>`).appendTo('ul')) // 주어객체에 handler 등록하고 주어객체에 click event가 발생하면 실행된다.
+
+    $('button').eq(1).click(() => $('ul').empty()) // empty는 children을 다 없앤다.
+})
+</script>
+
+<button type='button'>click</button>
+<button type='button'>clear</button>
+<ul></ul>

@@ -12,6 +12,9 @@ $(() => {
     $('ul').find('li').eq(2).html('index: 2').end() // end()는 find가 return한 collection을 return한다. 원점은 li 5개 들어있는 collection이다.
         .eq(3).html('index: 3').end() // find와 end가 return한 collection은 같다.
         .eq(4).html('index: 4')
+
+    $('h1').text('Hi') // 태그를 쓸 수 없다. text만 사용이 가능하다. h1 2군데에 hi가 들어간다.
+    console.log($('h1').text())
 })
 </script>
 

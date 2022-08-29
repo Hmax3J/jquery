@@ -1,0 +1,16 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click('abel', e => { // 'abel'이 이벤트 e 객체에 들어간다. 첫 번째 파라미터로 준다.
+        let userName = $('input').val()
+        if(userName == e.data)
+            $('span').text(` valid: ${e.data}`).show().fadeOut(1000)
+        else $('span').text(` invalid: ${userName}`)
+    })
+})
+</script>
+
+<form>
+    <input type='text' name='username' placeholder='사용자명'/><span></span><br>
+    <button type='button'>submit</button>
+</form>
