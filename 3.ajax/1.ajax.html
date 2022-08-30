@@ -1,0 +1,27 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click(() => {
+        $.ajax({ // 객체형태로 만든다. 클라이언트가 서버로 request를 보낸다.
+            url: '1.data.json',
+            data: {id: 'yellow'}, // request에 담기는 타입은 text라 text로 시리얼라이징 해서 담는다.
+            type: 'get', // read 할테니 줘 라는 뜻이다.
+            dataType: 'json', // 여기까지는 request
+            success: (data, status, xhr) => { // reponse에 담기는 text가 data에 담긴다.
+                $('<h3>').text(data.userName).appendTo('body')
+                $('<p>').html(status).appendTo('body') // 성공은 200이다. status: 200
+                console.log(xhr)
+            },
+            error: (xhr, status) => { // url을 틀리게 쓰면 404 error, Not found
+                console.log('error: ', status)
+                console.log(xhr)
+            },
+            complete: (xhr, status) => { // 결과와 상관없이 나타내고 싶은 것을 쓴다.
+                console.log('comple: ', status)
+            } // 여기까지가 response
+        })
+    }) // chrome에서 실행되고 request를 live server에 보낸다. url에 해당하는 파일을 찾아 response를 담아 클라이언트에 보낸다.
+})
+</script>
+
+<button type='button'>click</button>

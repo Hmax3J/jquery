@@ -1,9 +1,9 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 $(() => {
-    $('button').on('click', () => $('span').text(' clicked.')) // 이벤트이름, 핸들러
+    $('button').on('click', () => $('span').text(' clicked.'))
 
-    $('button').on({ // 이벤트 이름은 key다.
+    $('button').on({
         mouseover: () => $('span').text(' overed.'),
         mouseout: () => $('span').text(' outed.')
     })
