@@ -1,0 +1,52 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('#wrap').on({
+        mouseenter: function() {
+            $(this).removeClass().addClass('circle mouseenter')
+        },
+        mouseleave() {
+            $(this).removeClass().addClass('circle mouseleave')
+        }
+    }, '.circle')
+
+    // $('button').on('click', () => $('#wrap').append($('.circle')))
+    // $('button').on('click', () => $('#wrap').append($('.circle').clone()))
+    // $('button').on('click', () => $('#wrap').append($('.circle').eq(0).clone()))
+    $('button').on('click', () => $('#wrap').append($('.circle').first().clone()))
+})
+</script>
+
+<style>
+    #wrap {
+        margin: 1rem;
+    }
+
+    .circle {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        border: .1rem solid;
+    }
+
+    .square {
+        width: 5rem;
+        height: 5rem;
+        border: .1rem solid;
+    }
+
+    .mouseenter {
+        background: red;
+    }
+
+    .mouseleave {
+        background: ''
+    }
+</style>
+
+<button type='button'>create</button>
+
+<div id='wrap'>
+    <div class='circle'></div>
+    <div class='square'></div>
+</div>

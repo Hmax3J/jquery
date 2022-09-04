@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('input').val($('input').val().split('-').join(''))
+
+    $('input').val($('input').val().replaceAll('-', ''))
+
+    $('input').val($('input').val().replace(/-/g, ''))
+})
+</script>
+
+<form>
+    <input type='tel' value='010-1234-5678'/>
+</form>
