@@ -1,0 +1,27 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click(() => {
+        $.ajax({
+            url: '1.data.json',
+            data: {id: 'yellow'},
+            type: 'get',
+            dataType: 'josn',
+            success: (data, status, xhr) => {
+                $('<h3>').text(data.userName).appendTo('body')
+                $('<p>').html(status).appendTo('body')
+                console.log(xhr)
+            },
+            error: (xhr, status) => {
+                console.log('error: ', status)
+                console.log(xhr)
+            },
+            complete: (xhr, status) => {
+                console.log('comple: ', status)
+            }
+        })
+    })
+})
+</script>
+
+<button type='button'>click</button>
